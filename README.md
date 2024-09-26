@@ -67,3 +67,10 @@ month1 month2 month3 month4 month5 month6 month7 month
 
 
 #BAsh processes command lines - Tokenisation, Command Identification, Shell expansions, Quote removal, redirections
+
+```
+if [[ 2 -gt 1]]; then 
+  echo "hello world"
+fi  ```
+
+A simple command is just a list of words separated by spaces and terminated by either a new line or one of the other control operators available in bash
