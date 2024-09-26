@@ -11,7 +11,13 @@
 
 # Usage:
 #backup_script
-- ```tar -cvf ~/bash_course/my_backup_"$(date +%d-%m-%Y_%H-%M-%S)".tar ~/* 2>/dev/null```
+```echo "Hello, ${USER^}"```
+``` echo "I will now backup your hime directory, $HOME" ```
+```currentdir=$(pwd)```
+```echo "You are running this script from $currentdir"```
+```echo "Therefore, I will save the backup in $currentdir"```
+- ```tar -cf $currentdir/my_backup_"$(date +%d-%m-%Y_%H-%M-%S)".tar $HOME/* 2>/dev/null```
+```echo "Backup Completed Successfully"```
 - exit 0
 ```
 
@@ -30,3 +36,34 @@
 
 -- The PATH variable tells the shell where to search for executable files
 -- We can make our scripts accessible system-wide by putting them into a folder covered by our PATH
+
+## Parameter Expansion
+
+```numbers=0123456789```
+```${parameters:offset:length}^C```
+```echo ${numbers:0:7}```
+
+--- ```time=$(date +%H:%m:%S)```
+
+--- ```echo "Hello $USER, the time right now is $time"```
+
+## Arithmetic Expression
+
+x=4
+y=2
+```echo $(( 4 + 2 )) ```
+
+```echo $(( $x + $y )) ```
+
+## Tilde Expression 
+
+``` echo ~ ```
+```echo $PWD ```
+
+## Brace Expression 
+
+```echo month{1..12}```
+month1 month2 month3 month4 month5 month6 month7 month
+
+
+#BAsh processes command lines - Tokenisation, Command Identification, Shell expansions, Quote removal, redirections
