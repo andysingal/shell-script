@@ -80,7 +80,7 @@ A simple command is just a list of words separated by spaces and terminated by e
 Word splitting can have  some very significant effects on how your command lines are interpreted
 
 
-## Globbing
+## Globbing: It is also known as filename expansion, is used to generate an alphabetically-sorted list of file names that match a certain pattern exactly. Any word on the command line that contains an unquoted *,? or [ will be interpreted as a pattern
 
 ```ls * ```
 ```ls file[ab].txt ```
@@ -88,3 +88,10 @@ Word splitting can have  some very significant effects on how your command lines
 ```ls file[abc][abc][abc].txt```
 
 ```ls file[a-g].txt```
+
+```rm ~/Downloads/*.jpg```
+
+## Types of Quotes
+1. Backslashes: \
+2. Single Quotes: ``
+3. Double Quotes " " 
