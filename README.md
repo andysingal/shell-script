@@ -78,3 +78,13 @@ A simple command is just a list of words separated by spaces and terminated by e
 
 ## Word splitting
 Word splitting can have  some very significant effects on how your command lines are interpreted
+
+
+## Globbing
+
+```ls * ```
+```ls file[ab].txt ```
+
+```ls file[abc][abc][abc].txt```
+
+```ls file[a-g].txt```
