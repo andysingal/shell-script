@@ -94,4 +94,15 @@ Word splitting can have  some very significant effects on how your command lines
 ## Types of Quotes
 1. Backslashes: \
 2. Single Quotes: ``
-3. Double Quotes " " 
+3. Double Quotes " "
+
+
+
+## EXAMPLES 
+
+echo $name > "~/$out"
+echo $name > "$HOME/$out"
+
+## Advanced
+
+echo "$(ls *.txt)"
