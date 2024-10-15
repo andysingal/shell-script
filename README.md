@@ -125,6 +125,11 @@ echo "The 10th argument is ${10}
 
 echo $(( {2:-0} $1 ${3:-0} $1 ${4:-0} $1 ${5:-0}  $1 ${6:-0} $1 ${7:-0} $1 ${8:-0} $1 ${9:-0} $1 ${10:-0}  ))
 
+-- replace with 
+
+echo $(( $@ ))
+
+
 chmod 744 calculator.sh
 
 ./calculator.sh + 5 5 5 5 
@@ -146,3 +151,14 @@ $*: $1 $2 $3... $N.. Where N is the number of command line arguments provided...
 - That $@ and $* allow you to access all the positional parameters that are provided to your bash script
 - The $@ expands to all the positional parameters provided to the script, but provides them as unquoted separate words , that are subject to word splitting
 - "$@" stops subsequent word splitting and ensures the value of the positional parameters is exactly how they were provided by the user 
+
+
+## READ COMMAND 
+echo $REPLY
+
+read.... hello
+
+Now when i type: 
+echo $REPLY
+
+it gives hellol
