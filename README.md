@@ -106,3 +106,43 @@ echo $name > "$HOME/$out"
 ## Advanced
 
 echo "$(ls *.txt)"
+
+
+## Requesting User input 
+
+```
+#!/bin/bash
+echo "My name is $1"
+echo "My home directory is $2"
+echo "My favourite color is $3"
+echo "The 10th argument is ${10}
+```
+
+- Command line arguments are information you give to your script from your command line. Each argument is separated by a spac
+- Positional parameters are parameters set by the shell to store the value of each of these command line arguments
+
+#!/bin/bash 
+
+echo $(( {2:-0} $1 ${3:-0} $1 ${4:-0} $1 ${5:-0}  $1 ${6:-0} $1 ${7:-0} $1 ${8:-0} $1 ${9:-0} $1 ${10:-0}  ))
+
+chmod 744 calculator.sh
+
+./calculator.sh + 5 5 5 5 
+${parameter:-word}
+
+## Special Parameters
+
+#!/bin/bash
+echo "My name is $1"
+echo "My home directory is $2"
+echo "My favourite color is $3"
+echo "The 10th argument is ${10}
+echo $#
+
+$@: $1 $2 $3 ... $N..... Where N is the number of command line arguments provided
+
+$*: $1 $2 $3... $N.. Where N is the number of command line arguments provided... All positional parameters as separate words.... Its exactly the same as $@
+
+- That $@ and $* allow you to access all the positional parameters that are provided to your bash script
+- The $@ expands to all the positional parameters provided to the script, but provides them as unquoted separate words , that are subject to word splitting
+- "$@" stops subsequent word splitting and ensures the value of the positional parameters is exactly how they were provided by the user 
